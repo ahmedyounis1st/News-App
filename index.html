@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html id="myForm" lang="en">
+    <head>
+        <title>IPR2.1 News App</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial_scale = 1.0">
+        <script src="script.js" ></script>
+        
+    </head>
+    <body class="style_of_app">
+        <header class="style_of_header">
+            News App
+        </header>
+        <div class="container">
+
+            <div class="search-container"> 
+                <form method = "POST" action="">
+                    <input type="text" id="myInput" onsubmit="search()" class="search"  name="query" placeholder="Enter Your Query" title="Type in a query">
+                    <button class="btn"  onclick ="search()" value="search">Search</button>
+                </form>
+            </div>
+            <div class="wrapper">
+              
+                <div>
+                    <ul class="style_of_list" id = "news-container">
+                        
+                    </ul>
+                </div>
+                <script>
+                    listsPosts('news-container');
+                </script>    
+            </div>
+            <div class="block">
+                <form method="GET" action="">
+                    <button class="btn"  onclick ="load_more()" type="submit" value="search">Load More</button>
+                </form>
+            </div>
+
+            <div class="search-container"> 
+                <form method = "POST" action="">
+                    <input type="text" id="Filter" onsubmit="filter()" class="search"  name="sourse" placeholder="Filter" title="Type in a source">
+                    <button class="btn" type="submit"  onclick = "filter()" value="search">Filter</button>
+                    <p id = "res-state" class="style_of_result"></p>
+                </form>
+            </div>
+
+        </div>
+
+     </body>
+    </html>
